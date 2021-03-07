@@ -16,12 +16,7 @@ def classify(num):
 def main():
    
     st.title("Streamlit Tutorial")
-    html_temp = """
-    <div style="background-color:teal ;padding:10px">
-    <h2 style="color:white;text-align:center;">Iris Classification</h2>
-    </div>
-    """
-    st.markdown(html_temp, unsafe_allow_html=True)
+    st.header("                      IRIS CLASSIFICATION")
     sl=st.slider('Select Sepal Length', 0.0, 10.0)
     sw=st.slider('Select Sepal Width', 0.0, 10.0)
     pl=st.slider('Select Petal Length', 0.0, 10.0)
