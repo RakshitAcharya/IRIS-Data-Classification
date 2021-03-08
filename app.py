@@ -1,10 +1,11 @@
 import streamlit as st
 import pickle
+import joblib
 
 
 
-lin_model=pickle.load(open('lin_model.pkl','rb'))
-knn_model=pickle.load(open("knn_iris.pkl","rb"))
+knn=open("knn_iris.pkl","rb")
+knn_model=joblib.load(knn)
 
 
    
@@ -23,5 +24,3 @@ if st.button('Classify'):
         st.success('Versicolor')
     else:
         st.success('Virginica')
-    
-   
