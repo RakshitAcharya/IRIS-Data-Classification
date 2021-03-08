@@ -1,10 +1,18 @@
 import streamlit as st
 import pickle
 import joblib
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GridSearchCV
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
 
 
-
-knn=open("knn_iris.pkl","rb")
+knn=open("lin_model.pkl","rb")
 knn_model=joblib.load(knn)
 
 
@@ -24,3 +32,4 @@ if st.button('Classify'):
         st.success('Versicolor')
     else:
         st.success('Virginica')
+    
